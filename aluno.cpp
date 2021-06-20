@@ -1,19 +1,3 @@
-/*• Criar Lista;
-• Inserir novo aluno (ordenado pela matrícula OU final);
-• Remover um aluno (matrícula);
-• Buscar um aluno (matrícula):
-    oApós busca, perguntar se deseja alterar o atributo Nota_1 ou Nota_2 do aluno;
-          oSe SIM: receber novo valor e calcular a Média Final e situação;
-                    MF = Nota_1*0.4 + Nota_2*0.6;
-                    MF ≥ 6: Aprovado; MF < 6: Reprovado;
-• Calcular a Média Final Aritmética de toda a turma;
-• Listar todos os alunos cadastrados na Lista (com um índice do lado);
-          oExemplo:
-                    1 – Dados Aluno_1;
-                    2 – Dados Aluno_2;
-                    ...
-                    N – Dados Aluno_N.
-•Limpar Lista antes de fechar o programa;*/
 #include "aluno.h"
 using namespace std;
 
@@ -90,6 +74,20 @@ void Aluno::mostrarInfo(){
   cout << matricula << " "<< idade << " " << nome <<" " << nota1<< " "<<nota2<<" media:"<<getMedia() << "situaçao: " <<AprovadoReprovado()<< endl;
 }
 
+
+
+void Aluno::setNota1(float a){
+  if(a >=0 or a <=10){
+    nota1 = a;
+  }
+}
+void Aluno::setNota2(float a){
+  if(a >=0 or a <=10){
+    nota2 = a;
+  }
+}
+
+
 Aluno obterInfo(){
   Aluno aluno;
   string temp;
@@ -120,9 +118,17 @@ int menu(){
   int opcao;
   cout<< "1 - criar lista\n";
   cout << "2- inserir novo aluno.\n";
-  cout <<"3 remover um anluno.\n";
+  cout <<"3 remover um aluno.\n";
   cout<<"4- Buscar aluno\n";
+  cout<<"5- mostrar lista\n";
+  cout<<"6- media da turma.\n";
+  cout<<"7- sair.\n";
   cin >> opcao;
   return opcao;
   system("clear");
+}
+
+
+bool compara_matricula(Aluno a, Aluno b){
+  return a.getMatricula() > b.getMatricula();
 }

@@ -12,7 +12,7 @@ O programa deve ter um menu com as seguintes opções:
 • Criar Lista;
 • Inserir novo aluno (ordenado pela matrícula OU final);
 • Remover um aluno (matrícula);
-• Buscar um aluno (matrícula):
+• Buscar um aluno (matrícula): 
     oApós busca, perguntar se deseja alterar o atributo Nota_1 ou Nota_2 do aluno;
           oSe SIM: receber novo valor e calcular a Média Final e situação;
                     MF = Nota_1*0.4 + Nota_2*0.6;

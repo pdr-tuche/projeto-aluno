@@ -13,6 +13,7 @@ class Aluno {
 
   public:
     Aluno(){}
+  
     
     void setNome(string a);
     string getNome();
@@ -26,26 +27,13 @@ class Aluno {
     float getMedia();
     string AprovadoReprovado();
     void mostrarInfo();
+    void setNota1(float a);
+    void setNota2(float a);
+    
+    
     
 };
 
 int menu();
 Aluno obterInfo();
-
-
-/*• Criar Lista;
-• Inserir novo aluno (ordenado pela matrícula OU final);
-• Remover um aluno (matrícula);
-• Buscar um aluno (matrícula):
-    oApós busca, perguntar se deseja alterar o atributo Nota_1 ou Nota_2 do aluno;
-          oSe SIM: receber novo valor e calcular a Média Final e situação;
-                    MF = Nota_1*0.4 + Nota_2*0.6;
-                    MF ≥ 6: Aprovado; MF < 6: Reprovado;
-• Calcular a Média Final Aritmética de toda a turma;
-• Listar todos os alunos cadastrados na Lista (com um índice do lado);
-          oExemplo:
-                    1 – Dados Aluno_1;
-                    2 – Dados Aluno_2;
-                    ...
-                    N – Dados Aluno_N.
-•Limpar Lista antes de fechar o programa;*/
+bool compara_matricula(Aluno a, Aluno b);
