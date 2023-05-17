@@ -1,7 +1,7 @@
 # projeto-aluno
 consiste em um sistema de gerenciamento de alunos. Utilizando as bibliotecas Vector e algorithm
 
-[link repl.it](https://replit.com/@pdrtuche/Projeto-Aluno-C?v=1)
+[link repl.it](https://replit.com/@pdrtuche/Projetin-C)
 
 A CLI apresenta o seguinte menu:
 
